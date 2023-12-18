@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Hedvig+Letters+Serif:opsz@12..24&family=Pacifico&display=swap');
+body{
+    margin:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+a{
+    color: black;
+}
+
+.header{
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position:fixed;
+    width:100%;
+    z-index:3;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: white;
+}
+
+.header ul a{
+    display: block;
+    padding: 20px;
+    border-right: 2px solid #aaa;
+    text-decoration: none;
+}
+
+.header ul a:hover{
+    background-color: #ddd;
+}
+.header .logo{
+    float: left;
+    display: block;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.header .menu{
+    clear:both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon{
+    
+    padding: 28px 20px;
+    position: relative;
+    float:right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon::after{
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+.header .menu-btn{
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu{
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media (min-width:48em){
+
+    .header li{
+        float: left;
+    }
+    
+    .header li a{
+        padding: 20px 30px;
+    }
+
+    .header .menu{
+        clear:none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display: none;
+    }
+}
+
+
+#FirstHome{
+    box-sizing: border-box;
+    display: block;
+    line-height: 24px;
+    background-image: url(BackgroundImgHomeTop.png);
+    position: relative;
+}
+
+#HomeTop{
+    box-sizing: border-box;
+    display: flex;
+    justify-content:center;
+    
+    position: relative;
+}
+
+
+#HomeLeft{
+    box-sizing: border-box;
+    display: block;
+    line-height: 24px;
+    margin-left: 96px;
+    margin-right: 150px;
+    max-width: 436px;
+    padding-bottom: 55px;
+    padding-top: 40px;
+    position: relative;
+    width: 436px;
+    z-index: 3;
+}
+
+#HomeLeft h1{
+    display: block;
+    box-sizing: border-box;
+    line-height: 92px;
+    max-width: 100%;
+    line-height: 92px;
+}
+
+#HomeLeft p{
+    box-sizing: border-box;
+    display: block;
+    line-height: 28px;
+    margin-block-end: 24px;
+    margin-block-start: 24px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    max-width: 100%;
+}
+
+#HomeLeft button{
+    width: 350px;
+    text-align: center;
+    margin-left: 10px;
+    height: 26px;
+}
+
+#HomeLeft button:hover{
+    background: black;
+    color: white;
+    transition: .5s;
+}
+
+#HomeRight{
+    box-sizing: border-box;
+    display: block;
+    height: 345px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    margin-right: 60px;
+    margin-top: 32px;
+    width: 328px;
+    margin-left: 0px ;
+}
+
+#HomeRight img{
+    height: 106.5%;
+    margin-right: 30px;
+    
+}
+
+
+
+#HomeRight fieldset{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 50px;
+}
+
+#HomeRight legend{
+padding-top: 1px;
+padding-bottom: 3px;
+text-align: center;
+background-color: red;
+color: white;
+}
+
+
+
+#HomeLesson td{
+    border: 1px solid black;
+    width: 1700px;
+}
+
+#HomeBottom{
+    background: white;
+}
+
+#h2Home{
+    text-align: center;
+    color: white;
+    background: black;
+    margin-bottom: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 0;
+}
+
+#pHome{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    
+}
+
+
+#HomeLesson a{
+    text-decoration: none;
+}
+
+#HomeLesson td:hover{
+    background:grey;
+    
+    text-decoration: none;
+    transition: .5s;
+}
+
+#HomeLesson td:hover p{
+    color: white;
+}
+
+#HomeRight{
+    
+    background: white;
+    margin-left: 10%;
+}
+
+@media (max-width: 1024px){
+
+    #HomeRight img{
+        width: 110%;
+    }
+    
+    #FirstHome{
+        margin-right: 10%;
+    }
+
+    #h2Home{
+        margin-right: 90px;
+    }
+
+    #pHome{
+        margin-right: 105px;
+    }
+
+    #HomeLesson tr{
+        display: block;
+    }
+
+    #HomeLesson td{
+        display: block;
+        text-align: center;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px){
+    #FirstHome{
+        width: 770px;
+    }
+
+    #HomeRight img{
+        padding-right: .000001px;
+    }
+
+    #h2Home{
+        margin-right: 0;
+    }
+
+    #pHome{
+        margin-right: 0;
+        padding-left: 30%;
+    }
+
+   #HomeLesson{
+    margin-right: 100%;
+    padding-right: 100%;
+   }
+}
+    
+@media (max-width: 768px){
+    #FirstHome{
+        width: 770px;
+    }
+
+    #HomeRight img{
+        padding-right: .000001px;
+    }
+
+    #h2Home{
+        padding-left: 100px;
+    }
+
+    #pHome{
+        margin-right: 0;
+        padding-left: 30%;
+    }
+
+   #HomeLesson{
+    margin-right: 100%;
+    padding-right: 100%;
+   }
+
+   #HomeLesson tr{
+    margin-right: 100%;
+    padding-right: 100%;
+   }
+
+   #HomeLesson tr td{
+    margin-right: 100%;
+    padding-right: 100%;
+   }
+   }
+
+
+
+
+#Lessons-Content{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(BackgroundImgHomeTop.png);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#Lessons{
+    margin: 50px auto;
+    width: 1000px;
+}
+
+#Lessons li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 4px;
+}
+
+#Lessons li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: red;
+}
+
+#Lessons li label span{
+    transform: rotate(90deg);
+    font-size: 22px;
+    color:#333
+}
+
+#Lessons label + input[type="radio"]{
+    display: none;
+}
+
+#Lessons .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#Lessons label + input[type="radio"]:checked + .content{
+    max-height: 1250px;
+}
+
+.app{
+    background-color: black;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.app h1{
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18;
+    color: white;
+    font-weight: 600;
+}
+
+.btn{
+    background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background: grey;
+    color: white;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: grey;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+
+@media (max-width: 1024px){
+    
+    #Lessons {
+        width: 70%;
+    }
+
+    
+
+    .app {
+        width: 70%;
+    }
+
+    #Lessons li{
+        width: 100%;
+    }
+    
+    #Lessons h4{
+        width: 90%;
+    }
+    #Lessons img{
+        width: 50%;
+    }
+    
+    #Lessons iframe{
+        width: 60%
+    }
+
+    #Lessons label + input[type="radio"]:checked + .content{
+        max-height: 3000px;
+    }
+}
+
+@media (max-width: 768px){
+    
+    #Lessons {
+        width: 70%;
+    }
+
+    .app {
+        width: 70%;
+    }
+
+    #Lessons li{
+        width: 100%;
+    }
+    
+    #Lessons h4{
+        width: 90%;
+    }
+    #Lessons img{
+        width: 50%;
+    }
+    
+    #Lessons iframe{
+        width: 60%
+    }
+
+    #Lessons label + input[type="radio"]:checked + .content{
+        max-height: 3000px;
+    }
+}
+@media (max-width: 425px){
+    
+    #Lessons {
+        width: 70%;
+    }
+
+    #Lessons label h1{
+        text-align: center;
+        font-size: 21px;
+        margin-top: 21px;
+        margin-right: 100%;
+    }
+    .app {
+        width: 70%;
+    }
+
+    #Lessons h1{
+        width: 1em;
+    }
+
+    #Lessons li{
+        width: 100%;
+    }
+    
+    #Lessons h4{
+        width: 90%;
+    }
+    #Lessons img{
+        width: 50%;
+    }
+    
+    #Lessons iframe{
+        width: 70%
+    }
+
+    #Lessons label + input[type="radio"]:checked + .content{
+        max-height: 3000px;
+    }
+}
+
+@media (max-width: 375px){
+    
+    #Lessons {
+        width: 70%;
+    }
+
+    #Lessons label h1{
+        text-align: center;
+        font-size: 21px;
+        margin-top: 50%;
+        margin-right: 200%;
+    }
+    .app {
+        width: 70%;
+    }
+
+    #Lessons h1{
+        width: 1em;
+    }
+
+    #Lessons li{
+        width: 100%;
+    }
+    
+    #Lessons h4{
+        width: 90%;
+    }
+    #Lessons img{
+        width: 50%;
+    }
+    
+    #Lessons iframe{
+        width: 70%
+    }
+
+    #Lessons label + input[type="radio"]:checked + .content{
+        max-height: 3000px;
+    }
+}
+
+@media (max-width: 320px){
+    
+    #Lessons {
+        width: 70%;
+    }
+
+    #Lessons label h1{
+        text-align: center;
+        font-size: 21px;
+        margin-top: 50%;
+        margin-right: 200%;
+    }
+    .app {
+        width: 70%;
+    }
+
+    #Lessons h1{
+        width: 1em;
+    }
+
+    #Lessons li{
+        width: 100%;
+    }
+    
+    #Lessons h4{
+        width: 90%;
+    }
+    #Lessons img{
+        width: 50%;
+    }
+    
+    #Lessons iframe{
+        width: 70%
+    }
+
+    #Lessons label + input[type="radio"]:checked + .content{
+        max-height: 3000px;
+    }
+}
